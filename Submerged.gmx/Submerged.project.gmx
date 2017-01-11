@@ -22,10 +22,12 @@
     <object>objects\obj_player1</object>
     <object>objects\obj_player2</object>
     <object>objects\obj_menu</object>
+    <object>objects\obj_paused</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu0</room>
     <room>rooms\rm_ocean1</room>
+    <room>rooms\rm_paused</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
