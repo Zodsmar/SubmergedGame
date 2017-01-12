@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Paused Boolean
+
 paused = false;
 </string>
           </argument>
@@ -50,15 +51,22 @@ paused = false;
           <argument>
             <kind>1</kind>
             <string>///PAUSE
-if(keyboard_check(vk_escape)){
- if(paused == true){
-     room_goto(rm_ocean1);
-    paused = false;
-     } else if (!paused) {
-     room_goto(rm_paused);
-      paused = true;
+
+if(paused == true){
+    if(keyboard_check(vk_escape)){
+        room_goto(rm_ocean1);
+        paused = false;
     }
+        if(room_get_name(room) == "rm_paused" &amp;&amp; keyboard_check(ord("Q"))){
+        game_end();
+    }
+} else if (!paused) {
+     if(keyboard_check(vk_escape)){
+     room_goto(rm_paused);
+     paused = true;
+     }
 }
+
 </string>
           </argument>
         </arguments>

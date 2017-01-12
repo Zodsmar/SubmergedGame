@@ -12,6 +12,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_water</background>
+    <background>background\bg_paused</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
