@@ -9,6 +9,7 @@
     <sprite>sprites\sp_player1</sprite>
     <sprite>sprites\sp_player2</sprite>
     <sprite>sprites\sp_selector</sprite>
+    <sprite>sprites\sp_floor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_water</background>
@@ -22,10 +23,17 @@
     <font>fonts\fnt_menu</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_player1</object>
-    <object>objects\obj_player2</object>
-    <object>objects\obj_menu</object>
-    <object>objects\obj_paused</object>
+    <objects name="Controllers">
+      <object>objects\obj_menu</object>
+      <object>objects\obj_paused</object>
+    </objects>
+    <objects name="Entities">
+      <object>objects\obj_player1</object>
+      <object>objects\obj_player2</object>
+    </objects>
+    <objects name="Parents">
+      <object>objects\obj_parent</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu0</room>
