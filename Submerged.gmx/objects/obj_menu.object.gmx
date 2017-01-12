@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu[0] = "Start";
+            <string>///CREATE MENU
+menu[0] = "Start";
 menu[1] = "Quit";
 
 space = 64;
@@ -52,7 +53,8 @@ mpos = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var move = 0;
+            <string>///MENU
+var move = 0;
 move -= max(keyboard_check_pressed(vk_up),keyboard_check_pressed(ord("W")), 0);
 move += max(keyboard_check_pressed(vk_down),keyboard_check_pressed(ord("S")), 0);
 
@@ -95,7 +97,9 @@ scr_menu();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
+            <string>///DRAW MENU
+
+draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_menu);
 draw_set_color(c_white);

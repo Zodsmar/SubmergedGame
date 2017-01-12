@@ -10,7 +10,9 @@
     <sprite>sprites\sp_player2</sprite>
     <sprite>sprites\sp_selector</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_water</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>

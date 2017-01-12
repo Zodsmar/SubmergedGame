@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>paused = false;
+            <string>///Paused Boolean
+paused = false;
 </string>
           </argument>
         </arguments>
@@ -48,14 +49,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///PAUSE
 if(keyboard_check(vk_escape)){
  if(paused == true){
      room_goto(rm_ocean1);
     paused = false;
      } else if (!paused) {
-         paused = true;
      room_goto(rm_paused);
+      paused = true;
     }
 }
 </string>
