@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent</parentName>
+  <parentName>obj_entityGravity</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Friction Boolean
-friction = 0.3;
+            <string>///Inherit
+event_inherited();
 </string>
           </argument>
         </arguments>
@@ -52,24 +52,51 @@ friction = 0.3;
             <string>///MOVEMENT
 
 var spriteMid = 16;
+var left = keyboard_check(vk_left);
+var right = keyboard_check(vk_right);
+var jump = keyboard_check(vk_up);
+
+
 
 if(keyboard_check(vk_left)){
-hspeed -= 3;
-}
-if(keyboard_check(vk_right)){
-hspeed += 3;
-}
-if(keyboard_check(vk_up)){
-vspeed -= 3;
-}
-if(keyboard_check(vk_down)){
-vspeed += 3;
+    hSpeed = -1 * moveSpeed;
+}else if(keyboard_check(vk_right)){
+    hSpeed = 1 * moveSpeed;
+} else {
+    hSpeed = 0 * moveSpeed;
 }
 
 
-if(speed &gt; 4){
-speed = 4;
+if (vSpeed &lt; 10) vSpeed += grav;
+
+
+if (place_meeting(x,y+1,obj_floor))
+{
+    vSpeed = jump * -jumpSpeed
 }
+ 
+//Horizontal Collision
+if (place_meeting(x+hSpeed,y,obj_floor))
+{
+    while(!place_meeting(x+sign(hSpeed),y,obj_floor))
+    {
+        x += sign(hSpeed);
+    }
+    hSpeed = 0;
+}
+x += hSpeed;
+ 
+//Vertical Collision
+if (place_meeting(x,y+vSpeed,obj_floor))
+{
+    while(!place_meeting(x,y+sign(vSpeed),obj_floor))
+    {
+        y += sign(vSpeed);
+    }
+    vSpeed = 0;
+}
+y += vSpeed;
+
 
 x = min(x, room_width - spriteMid);
 x = max(x, spriteMid);

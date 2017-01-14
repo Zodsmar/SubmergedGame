@@ -31,9 +31,10 @@
     <objects name="Entities">
       <object>objects\obj_player1</object>
       <object>objects\obj_player2</object>
+      <object>objects\obj_floor</object>
     </objects>
     <objects name="Parents">
-      <object>objects\obj_parent</object>
+      <object>objects\obj_entityGravity</object>
     </objects>
   </objects>
   <rooms name="rooms">
