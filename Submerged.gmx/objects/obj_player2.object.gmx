@@ -52,25 +52,50 @@ event_inherited();
             <kind>1</kind>
             <string>///MOVEMENT
 
-var spriteMid = 16;
 
-if(keyboard_check(ord("A"))){
-hspeed -= 3;
-}
-if(keyboard_check(ord("D"))){
-hspeed += 3;
-}
-if(keyboard_check(ord("W"))){
-vspeed -= 3;
-}
-if(keyboard_check(ord("S"))){
-vspeed += 3;
-}
+var left = keyboard_check(ord("A"));
+var right = keyboard_check(ord("D"));
+var jump = keyboard_check(ord("W"));
 
 
-if(speed &gt; 4){
-speed = 4;
+if(left){
+    hSpeed = -1 * moveSpeed;
+}else if(right){
+    hSpeed = 1 * moveSpeed;
+} else {
+    hSpeed = 0 * moveSpeed;
 }
+
+
+if (vSpeed &lt; 10) vSpeed += grav;
+
+
+if (place_meeting(x,y+1,obj_floor))
+{
+    vSpeed = jump * -jumpSpeed
+}
+ 
+//Horizontal Collision
+if (place_meeting(x+hSpeed,y,obj_floor))
+{
+    while(!place_meeting(x+sign(hSpeed),y,obj_floor))
+    {
+        x += sign(hSpeed);
+    }
+    hSpeed = 0;
+}
+x += hSpeed;
+ 
+//Vertical Collision
+if (place_meeting(x,y+vSpeed,obj_floor))
+{
+    while(!place_meeting(x,y+sign(vSpeed),obj_floor))
+    {
+        y += sign(vSpeed);
+    }
+    vSpeed = 0;
+}
+y += vSpeed;
 
 x = min(x, room_width - spriteMid);
 x = max(x, spriteMid);

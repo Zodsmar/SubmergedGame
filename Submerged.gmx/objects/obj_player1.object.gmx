@@ -51,16 +51,13 @@ event_inherited();
             <kind>1</kind>
             <string>///MOVEMENT
 
-var spriteMid = 16;
 var left = keyboard_check(vk_left);
 var right = keyboard_check(vk_right);
 var jump = keyboard_check(vk_up);
 
-
-
-if(keyboard_check(vk_left)){
+if(left){
     hSpeed = -1 * moveSpeed;
-}else if(keyboard_check(vk_right)){
+}else if(right){
     hSpeed = 1 * moveSpeed;
 } else {
     hSpeed = 0 * moveSpeed;
@@ -96,7 +93,6 @@ if (place_meeting(x,y+vSpeed,obj_floor))
     vSpeed = 0;
 }
 y += vSpeed;
-
 
 x = min(x, room_width - spriteMid);
 x = max(x, spriteMid);
