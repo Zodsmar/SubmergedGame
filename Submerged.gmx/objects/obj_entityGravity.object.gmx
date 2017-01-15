@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Speed Controls/Movement Controls
 
-spriteMid = 64;
+spriteMid = 32;
 
 grav = 0.2;
 hSpeed = 3;

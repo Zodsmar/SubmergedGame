@@ -57,7 +57,11 @@ var left = keyboard_check(ord("A"));
 var right = keyboard_check(ord("D"));
 var jump = keyboard_check(ord("W"));
 
+//Stay in room
+x = min(x, room_width - spriteMid);
+x = max(x, spriteMid);
 
+//Movement
 if(left){
     hSpeed = -1 * moveSpeed;
 }else if(right){
@@ -96,9 +100,6 @@ if (place_meeting(x,y+vSpeed,obj_floor))
     vSpeed = 0;
 }
 y += vSpeed;
-
-x = min(x, room_width - spriteMid);
-x = max(x, spriteMid);
 
 </string>
           </argument>
