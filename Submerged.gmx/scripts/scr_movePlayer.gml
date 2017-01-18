@@ -1,13 +1,5 @@
 ///movePlayer(left, right, jump)
 
-grav = 0.2;
-hSpeed = 3;
-vSpeed = 3;
-jumpSpeed = 4;
-moveSpeed = 4;
-friction = 0.3;
-
-
 if(argument0){
     hSpeed = -1 * moveSpeed;
 }else if(argument1){

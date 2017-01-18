@@ -10,6 +10,7 @@
     <sprite>sprites\sp_player2</sprite>
     <sprite>sprites\sp_selector</sprite>
     <sprite>sprites\sp_floor</sprite>
+    <sprite>sprites\sp_subTest</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_water</background>
@@ -20,6 +21,7 @@
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_movePlayer.gml</script>
+    <script>scripts\scr_moveSub.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_menu</font>
@@ -33,9 +35,11 @@
       <object>objects\obj_player1</object>
       <object>objects\obj_player2</object>
       <object>objects\obj_floor</object>
+      <object>objects\obj_subWalls</object>
     </objects>
     <objects name="Parents">
-      <object>objects\obj_entityFriction</object>
+      <object>objects\obj_playerParent</object>
+      <object>objects\obj_subParent</object>
     </objects>
   </objects>
   <rooms name="rooms">
