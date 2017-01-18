@@ -41,8 +41,8 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_entityGravity" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="128" vborder="128" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="obj_entityGravity" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="obj_entityFriction" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="128" vborder="128" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="obj_entityFriction" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -54,7 +54,7 @@
     <instance objName="obj_player1" x="544" y="288" name="inst_F046737C" locked="0" code="" scaleX="0.527559041976929" scaleY="0.511627912521362" colour="4294967295" rotation="0"/>
     <instance objName="obj_player2" x="416" y="288" name="inst_920F519D" locked="0" code="" scaleX="0.4296875" scaleY="0.4296875" colour="4294967295" rotation="0"/>
     <instance objName="obj_paused" x="0" y="32" name="inst_93362D10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_entityGravity" x="32" y="32" name="inst_B389A3B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_entityFriction" x="32" y="32" name="inst_B389A3B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="384" y="352" name="inst_1A0EFFD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="416" y="352" name="inst_6CCD4E55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="416" y="352" name="inst_005E8C51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

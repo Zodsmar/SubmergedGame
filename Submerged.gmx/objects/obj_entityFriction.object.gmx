@@ -25,16 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Speed Controls/Movement Controls
+            <string>///friction
 
 spriteMid = 32;
-
-grav = 0.2;
-hSpeed = 3;
-vSpeed = 3;
-jumpSpeed = 4;
-moveSpeed = 4;
-friction = 0.3;
 </string>
           </argument>
         </arguments>
