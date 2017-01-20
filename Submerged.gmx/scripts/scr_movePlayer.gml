@@ -12,15 +12,15 @@ if(argument0){
 if (vSpeed < 10) vSpeed += grav;
 
 
-if (place_meeting(x,y+1,obj_floor))
+if (place_meeting(x,y+1,obj_solidParent))
 {
     vSpeed = (argument2) * -jumpSpeed;
 }
  
 //Horizontal Collision
-if (place_meeting(x+hSpeed,y,obj_floor))
+if (place_meeting(x+hSpeed,y,obj_solidParent))
 {
-    while(!place_meeting(x+sign(hSpeed),y,obj_floor))
+    while(!place_meeting(x+sign(hSpeed),y,obj_solidParent))
     {
         x += sign(hSpeed);
     }
@@ -29,9 +29,9 @@ if (place_meeting(x+hSpeed,y,obj_floor))
 x += hSpeed;
  
 //Vertical Collision
-if (place_meeting(x,y+vSpeed,obj_floor))
+if (place_meeting(x,y+vSpeed,obj_solidParent))
 {
-    while(!place_meeting(x,y+sign(vSpeed),obj_floor))
+    while(!place_meeting(x,y+sign(vSpeed),obj_solidParent))
     {
         y += sign(vSpeed);
     }

@@ -32,14 +32,15 @@
       <object>objects\obj_paused</object>
     </objects>
     <objects name="Entities">
+      <object>objects\obj_subWalls</object>
       <object>objects\obj_player1</object>
       <object>objects\obj_player2</object>
       <object>objects\obj_floor</object>
-      <object>objects\obj_subWalls</object>
     </objects>
     <objects name="Parents">
       <object>objects\obj_playerParent</object>
       <object>objects\obj_subParent</object>
+      <object>objects\obj_solidParent</object>
     </objects>
   </objects>
   <rooms name="rooms">
